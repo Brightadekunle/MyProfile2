@@ -1,0 +1,19 @@
+1. SELECT COUNT(name) FROM teamBright2021;
+
+2. SELECT COUNT(name) FROM teamBright2021 WHERE department = 'Accounting';
+
+3. SELECT COUNT(name) FROM teamBright2021 WHERE status = 'Pending';
+
+4. SELECT * FROM teamBright2021 WHERE status = 'Activated' LIMIT 5; 
+
+5. SELECT * FROM teamBright2021 WHERE age between 18 and 26;
+
+6. SELECT * FROM teamBright2021 WHERE createed_dt = '02-01-2020';
+
+7. SELECT * FROM teamBright2021 WHERE createed_dt between '04-01-2020' and '06-01-2020'; 
+
+8. UPDATE teamBright2021 SET status = 'Activated' where status = 'Pending';
+
+9. UPDATE teamBright2021 SET name = 'TIMOTHY' where name = 'TIM';
+
+10. SELECT department, COUNT(*) FROM teamBright2021 GROUP BY department;
