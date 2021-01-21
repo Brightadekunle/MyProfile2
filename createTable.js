@@ -32,14 +32,11 @@ pool.connect((err, client, done) => {
 
 // now lets create a new table called TeamManifest2021 - replace Manifest with your name
 pool.query(
-    `CREATE TABLE TeamBright2021(
+    `CREATE TABLE UserBright2021(
       ID SERIAL PRIMARY KEY, 
-      NAME VARCHAR(40) NOT NULL, 
-      AGE INTEGER NOT NULL, 
-      DEPARTMENT VARCHAR(40) NOT NULL, 
-      ROLE VARCHAR(40) NOT NULL, 
-      STATUS VARCHAR(40) NOT NULL, 
-      CREATEED_DT DATE NOT NULL)`, 
+      FIELDS VARCHAR(40) NOT NULL,
+      DATATYPE VARCHAR(40) NOT NULL,
+      SAMPLEDATA VARCHAR(100) NOT NULL)`, 
     (err, res) => {
         if(err) {
           console.log('Error or issue with table creation');

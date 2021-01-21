@@ -35,17 +35,33 @@ pool.connect((err, client, done) => {
 
 // insert a record into our table
 pool.query(
-    `INSERT INTO TeamBright2021
-                 (ID, NAME, AGE, DEPARTMENT, ROLE, STATUS, CREATEED_DT)
+    `INSERT INTO userbright2021
+                 (id, fields, datatype, sampledata)
                  VALUES 
-                 ('1', 'SARAH', '5', 'Accounting', 'PM' , 'Activated', '01-01-2020'),
-                 ('2', 'TIM', '10', 'Engineering', 'QA' , 'Pending', '02-01-2020'),
-                 ('3', 'JOE', '17', 'Management', 'PM' , 'Activated', '02-01-2020'),
-                 ('4', 'TOLU', '25', 'Management', 'Dev' , 'Pending', '02-01-2020'),
-                 ('5', 'ROB', '5', 'Engineering', 'QA' , 'Activated', '03-01-2020'),
-                 ('6', 'ADE', '10', 'Management', 'QA' , 'Pending', '04-01-2020'),
-                 ('7', 'TOM', '17', 'Security', 'QA' , 'Activated', '05-01-2020'),
-                 ('8', 'JIDE', '26', 'Accounting', 'Dev' , 'Activated', '06-01-2020')                 
+                 ('1', 'Country', 'String', 'Nigeria'),
+                 ('2', 'Business', 'String', 'Skillella'),
+                 ('3', 'Email Address', 'String', 'brightaverix@gmail.com'),
+                 ('4', 'Password', 'String', '!@#$%^^&*'),
+                 ('5', 'Firstname', 'String', 'Bright'),
+                 ('6', 'Lastname', 'String', 'Adegoke'),
+                 ('7', 'Technical skill', 'Boolean', 'Yes'),
+                 ('8', 'Description', 'Text', 'I write code'),
+                 ('9', 'Staff size', 'String', '1-6'),
+                 ('10', 'Industry', 'String', 'Technology'),
+                 ('11', 'Category', 'String', 'Business'),
+                 ('12', 'Business type', 'String', 'Scale'),
+                 ('13', 'City', 'String', 'Ibadan'),
+                 ('14', 'Street address', 'String', 'Challenge road.'),
+                 ('15', 'State', 'String', 'Oyo state'),
+                 ('16', 'Phone Number', 'String', '09038370144'),
+                 ('17', 'Website', 'String', 'www.skillella.com'),
+                 ('18', 'Nationality', 'String', 'Nigerian'),
+                 ('19', 'Identification Doc', 'String', 'identification.doc'),
+                 ('20', 'Identification Number', 'Integer', '287'),
+                 ('21', 'Proof of Adress', 'String', 'Management'),
+                 ('22', 'Account Provider', 'String', 'UBA Bank'),
+                 ('23', 'Account Number', 'String', '2078715064'),
+                 ('24', 'Account Name', 'String', 'Bright Adegoke')
                  `,
     (err, res) => {
       if(err) {
